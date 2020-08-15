@@ -1,0 +1,63 @@
+{
+  "name": "map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "prod": "SET \"NODE_ENV=production\" && webpack --mode production",
+    "prod-start": "SET \"NODE_ENV=production\" && webpack --mode production && node server.js",
+    "dev": "SET \"NODE_ENV=development\" && webpack-dev-server --mode development",
+    "server-start": "node ./dist/server.js",
+    "watch-server": "nodemon ./src/server/index.js",
+    "start-dev": "concurrently \"npm run watch-server\" \"npm run dev\"",
+    "build-server": "tsc --rootDir ./src/server",
+    "start": "node ./src/server/index.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.19.2",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-minify": "^0.5.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^4.2.1",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webpack": "^5.1.1",
+    "nodemon": "^2.0.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pug-html-loader": "^1.1.5",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
+  },
+  "keywords": [
+    "map"
+  ],
+  "author": "wasya1212",
+  "license": "MIT"
+}
